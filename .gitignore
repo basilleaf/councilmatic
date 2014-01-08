@@ -35,3 +35,10 @@ councilmatic/local_settings.py
 /static
 crons/daily_jobs
 crons/weekly_jobs
+
+# Vagrant
+.vagrant/
+
+# Database dump
+*.dump
+*.dump.gz
