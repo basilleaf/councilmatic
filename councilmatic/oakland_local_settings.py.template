@@ -69,7 +69,7 @@ LEGISLATION = {
     'SCRAPER': 'phillyleg.management.scraper_wrappers.sources.oakland_scraper.OaklandHostedLegistarSiteWrapper',
     'SCRAPER_OPTIONS': {
         'hostname': 'oakland.legistar.com',
-	    'fulltext': False,
+        'fulltext': False,
         'share_links': True,
         'sponsor_links': True
     },
