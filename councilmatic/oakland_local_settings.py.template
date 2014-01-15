@@ -17,8 +17,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'councilmatic',                      # Or path to database file if using sqlite3.
-        'USER': '**CHANGEME**',                      # Not used with sqlite3.
-        'PASSWORD': '**CHANGEME**',                  # Not used with sqlite3.
+        'USER': 'councilmatic',                      # Not used with sqlite3.
+        'PASSWORD': 'councilmatic',                  # Not used with sqlite3.
         'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -69,7 +69,9 @@ LEGISLATION = {
     'SCRAPER': 'phillyleg.management.scraper_wrappers.sources.oakland_scraper.OaklandHostedLegistarSiteWrapper',
     'SCRAPER_OPTIONS': {
         'hostname': 'oakland.legistar.com',
-	'fulltext': False
+        'fulltext': False,
+        'share_links': True,
+        'sponsor_links': True
     },
 }
 

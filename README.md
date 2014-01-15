@@ -6,6 +6,8 @@ This is a fork of Councilmatic to port it for Oakland.
 
 Getting Started
 ---------------
+(If you want to use Vagrant to get things setup automatically, skip to the Getting Started with Vagrant section farther down this page)
+
 First check out the project code.
 
     $ git clone https://github.com/guelo/councilmatic.git
@@ -86,6 +88,28 @@ Finally, to run the server:
 Now, check that everything is working by browsing to http://localhost:8000/. Now
 browse to http://localhost:8000/admin and enter the admin username and password
 you supplied and you should have access to all of the legislative files!
+
+
+Getting Started With Vagrant
+----------------------------
+
+1. First check out the project code.  `$ git clone https://github.com/guelo/councilmatic.git`
+
+2. Download and install Virtualbox from https://www.virtualbox.org/wiki/Downloads
+
+3. Download and install Vagrant from http://www.vagrantup.com/
+
+4. Open a terminal and navigate the the councilmatic directory and enter `vagrant up`.  This will provision and setup Councilmatic in a virtual machine.  (The virtual machine defaults to 1024 MB of RAM.  This value can be changed in the Vagrantfile).  This step may take a while.
+
+5. Run `vagrant ssh` to ssh into your new virtual machine.
+
+6. Run `python /vagrant/councilmatic/manage.py runserver 0.0.0.0:8000` to start the development server.
+
+7. Visit http://localhost:8000/ in your browser to see Councilmatic in action!
+
+### Next Steps
+
+The vagrant setup skips indexing the legislation files for searching as it takes a long time.  Until you index the files, a search will return zero results.  To index the legislation files, run `python /vagrant/councilmatic/manage.py rebuild_index --noinput`.
 
 
 Copyright

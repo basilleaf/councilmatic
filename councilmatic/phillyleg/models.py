@@ -137,7 +137,7 @@ class LegFile(TimestampedModelMixin, models.Model):
     version = models.CharField(max_length=100)
     is_routine = models.BooleanField(default=True, blank=True)
     name = models.TextField(null=True, blank=True)
-    froms = models.TextField(null=True, blank=True)
+    #froms = models.TextField(null=True, blank=True)
 
     class Meta:
         ordering = ['-key']
